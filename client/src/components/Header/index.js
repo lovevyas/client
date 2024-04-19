@@ -10,7 +10,9 @@ const Header = () => (
         <NavLink to='/'>
             <MainLogo src={Logo} alt='main-logo' />
         </NavLink>
-        
+        <NavLink to='/stock'>
+            Stocks
+        </NavLink>
         <NavLink to='/about'>
             About
         </NavLink>
