@@ -7,6 +7,7 @@ import LiveStock from './pages/LiveStock';
 import Header from './components/Header';
 import About from './pages/About';
 import Home from './pages';
+import Signup from './components/Auth/Signup';
 
 
 
@@ -16,7 +17,8 @@ function App() {
         <Header />
         <SearchInputProvider>
         <Routes>
-          <Route path="/" element={<LiveStock />} /> 
+          <Route path="/" element={<Signup/>}></Route>
+          <Route path="/home" element={<LiveStock />} /> 
           <Route path="/about" element={<About />} />
           <Route path="/stock" element={<Home />} />
         </Routes>

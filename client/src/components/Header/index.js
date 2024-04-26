@@ -7,7 +7,7 @@ import { Content, MainLogo, NavLink } from './Header.styles';
 
 const Header = () => (
     <Content>
-        <NavLink to='/'>
+        <NavLink to='/home'>
             <MainLogo src={Logo} alt='main-logo' />
         </NavLink>
         <NavLink to='/stock'>

@@ -10,10 +10,6 @@ const Home = () => {
     const [stockChartXValues, setStockChartXValues] = useState([]);
     const [stockChartYValues, setStockChartYValues] = useState([]);
 
-    useEffect(() => {
-        fetchStock();
-    }, [searchInput, fetchStock]);
-
     const fetchStock = () => {
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
@@ -31,6 +27,12 @@ const Home = () => {
                 setStockChartYValues(stockChartYValuesFunction);
             });
     };
+
+    useEffect(() => {
+        fetchStock();
+    }, [searchInput, fetchStock]);
+
+    
 
     const handleSearchStock = (e) => {
         setSearchInput(document.getElementById('searchInput').value);
