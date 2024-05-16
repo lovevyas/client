@@ -3,23 +3,24 @@ import "./Signup.css";
 import Axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 
-const Signup = () => {
-  const [username, setUsername] = useState("");
+const Login = () => {
+  
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
   const navigate = useNavigate();
+ 
+  Axios.defaults.withCredentials = true;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3000/auth/signup", {
-      username,
+    Axios.post("http://localhost:3000/auth/login", {
       email,
       password,
     })
       .then( response => {
         if(response.data.status) {
-          navigate('/login');
+          navigate('/home');
         } 
       })
       .catch((err) =>
@@ -30,14 +31,8 @@ const Signup = () => {
   return (
     <div className="sign-up-container">
       <form className="fullForm" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          placeholder="UserName"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
+        <h2>Login</h2>
+        
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -55,10 +50,11 @@ const Signup = () => {
         />
 
         <button type="submit">Sign Up</button>
-        <p>Already registerd !! <Link to="/login">Login</Link></p>
+        <Link to="/forgotPassword">Forget Password</Link>
+        <p>Don't Have an Account Create One !! <Link to="/">Sign Up</Link></p>
       </form>
     </div>
   );
 };
 
-export default Signup;
+export default Login;

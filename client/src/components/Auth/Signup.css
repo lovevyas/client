@@ -3,15 +3,19 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* margin-bottom: ; */
+    margin-top: -5%;
 }
-I
-.sign-up-form {
-    width: 300px;
+
+
+.fullForm {
+    width: 330px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #211919;
     border-radius: 8px;
-    box-shadow: 0 0 10px ☐ rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 label {
     display: block;
     margin-bottom: 8px;
@@ -34,5 +38,5 @@ button {
     cursor: pointer;
     }
 button:hover {
-background-color: ☐ #2980b9;
+background-color: #2980b9;
 }

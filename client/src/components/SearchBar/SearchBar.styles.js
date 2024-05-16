@@ -15,9 +15,9 @@ export const Content = styled.div`
     }
 
     #search-button {
-        margin-top: 20px;
+        margin-top: 5px;
         width: 50px;
-        height: 29px;
+        height: 27px;
         background-color: #17BECF;
         border: none;
         vertical-align: middle;
@@ -30,6 +30,6 @@ export const Content = styled.div`
     
     #search-logo {
         width: 15px;
-        margin-top: 2px;
+        margin-top: -3px;
     }
 `;

@@ -5,7 +5,9 @@ import Logo from '../../images/logo.png';
 
 import { Content, MainLogo, NavLink } from './Header.styles';
 
-const Header = () => (
+const Header = () => {
+    
+    return(
     <Content>
         <NavLink to='/home'>
             <MainLogo src={Logo} alt='main-logo' />
@@ -16,7 +18,11 @@ const Header = () => (
         <NavLink to='/about'>
             About
         </NavLink>
+        <NavLink>
+            <button >Logout</button> 
+        </NavLink>
     </Content>
-);
+)
+}
 
 export default Header;

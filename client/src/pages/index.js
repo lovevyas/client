@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import PlaceholderImage from './../images/placeholder.svg';
 // Components
 import SearchBar from '../components/SearchBar';
@@ -13,7 +12,7 @@ const Home = () => {
     const fetchStock = () => {
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
-
+            // limit of 25 requests per day
         fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${searchInput}&outputsize=compact&apikey=undefined`)
             .then(function(response) {
                 return response.json();
@@ -30,9 +29,7 @@ const Home = () => {
 
     useEffect(() => {
         fetchStock();
-    }, [searchInput, fetchStock]);
-
-    
+    }, [searchInput]);
 
     const handleSearchStock = (e) => {
         setSearchInput(document.getElementById('searchInput').value);
